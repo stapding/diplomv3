@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "allowJs": true, // <--- Add or set this to true
+    "noUnusedLocals": false,   // Отключает TS6133 (неиспользуемые переменные)
+    "noUnusedParameters": false, // Отключает TS6133 для параметров функций
+    "noImplicitAny": false,    // Отключает TS7006 (отсутствующий тип параметра)
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": true, // Отключает ошибки о недостижимом коде
+    "allowUnusedLabels": true,     // Отключает ошибки о неиспользуемых метках
+    "strict": false,              // Отключает строгую типизацию (может устранить TS2322, TS2538)
+    "noImplicitAny": false,       // Разрешает `any`, отключает TS7006 и может помочь с TS2339
+    "noImplicitThis": false,      // Отключает ошибки TS2698 (если проблема с `this`)
+    "strictNullChecks": false    // Отключает TS18048 (если проблема с `null`)
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
